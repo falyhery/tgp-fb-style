@@ -1,0 +1,19 @@
+<h1>Bienvenue sur The Gossip Project</h1>
+
+<p>Merci de t'inscrire ci-après pour partager tes potins</p>
+
+<div class="col-md-12 text-center"'>
+<%= button_to "Sign Up", '/users/new', method: :get%>
+</div>
+
+<p text="center">Si tu disposes déjà d'un compte, tu n'as qu'à te connecter ci-dessous</p>
+<div class="col-md-12 text-center"'>
+<p><%= button_to "Login", '/login', method: :get%></p>
+</div>
+
+<% if logged_in? %>
+    <h1>You are Logged In, <%= current_user.email %></h1>
+<%end%>
+
+
+
